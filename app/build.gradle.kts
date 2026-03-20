@@ -63,6 +63,8 @@ dependencies {
     implementation("org.readium.kotlin-toolkit:readium-navigator:3.1.2")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 
+    // Custom
+    implementation("androidx.compose.material:material-icons-extended")
 
     // Room — local database for books and progress
     implementation("androidx.room:room-runtime:2.7.1")

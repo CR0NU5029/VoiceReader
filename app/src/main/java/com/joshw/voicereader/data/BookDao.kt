@@ -16,6 +16,9 @@ interface BookDao {
     @Query("SELECT * FROM books WHERE id = :id")
     suspend fun getBookById(id: Long): Book?
 
+    @Query("SELECT COUNT(*) FROM books WHERE title = :title AND author = :author")
+    suspend fun countByTitleAndAuthor(title: String, author: String): Int
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertBook(book: Book): Long
 
